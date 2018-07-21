@@ -14,6 +14,14 @@ export class TodoListComponent implements OnInit {
       id: '123',
       title: 'First TODO',
       completed: false
+    }, {
+      id: '124',
+      title: 'Second TODO',
+      completed: true
+    }, {
+      id: '125',
+      title: 'Third TODO',
+      completed: false
     }];
   }
 
