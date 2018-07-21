@@ -1,5 +1,5 @@
 <div>
   <h4>Todos</h4>
-  <app-todo-form></app-todo-form>
-  <app-todo-item *ngFor="let item of list" [item]="item"></app-todo-item>
+  <app-todo-form (addTodo)="onAddTodo($event)"></app-todo-form>
+  <app-todo-item *ngFor="let item of todos" [item]="item"></app-todo-item>
 </div>

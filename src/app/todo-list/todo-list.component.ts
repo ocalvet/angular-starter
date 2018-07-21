@@ -7,25 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  list: any;
+  todos: any;
+  id: 3;
 
   constructor() {
-    this.list = [{
-      id: '123',
+    this.todos = [{
+      id: 0,
       title: 'First TODO',
       completed: false
     }, {
-      id: '124',
+      id: 1,
       title: 'Second TODO',
       completed: true
     }, {
-      id: '125',
+      id: 2,
       title: 'Third TODO',
       completed: false
     }];
   }
 
   ngOnInit() {
+  }
+
+  onAddTodo(title) {
+    console.log('adding todo', title);
+    this.todos.push({
+      id: this.id++,
+      title,
+      completed: false
+    });
   }
 
 }
