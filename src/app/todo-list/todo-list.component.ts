@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+  list: any;
+
+  constructor() {
+    this.list = [{
+      id: '123',
+      title: 'First TODO',
+      completed: false
+    }];
+  }
 
   ngOnInit() {
   }
